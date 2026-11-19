@@ -217,45 +217,70 @@ section{
 }
 .projects{
   background-color: var(--second-bg-color);
+  min-height: auto;
 }
 .project-box{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  place-items: center;
-  gap: 3rem;
-  row-gap: 5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .project-card{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   background-color: var(--bg-color);
   border: 2px solid var(--main-color);
-  border-radius: 3rem;
-  gap: 2rem;
-  padding: 5rem 2rem;
+  border-radius: 2.5rem;
   overflow: hidden;
-  cursor: pointer;
   box-shadow: 0 0 5px var(--main-color);
-  transition: 0.3 ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .project-card:hover{
   box-shadow: 0 0 25px var(--main-color),
               0 0 50px var(--main-color);
-  transform: scale(1.02);
+  transform: translateY(-8px);
+}
+.project-image{
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: #080808;
 }
 .project-card img{
-  max-width: 300px;
-  border-right: 2rem;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.project-card:hover img{
+  transform: scale(1.04);
+}
+.project-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 3rem;
+  min-height: 210px;
 }
 .project-card h3{
   font-size: 3rem;
 }
 .project-card p{
-  font-size: 1.6rem;
+  font-size: 1.7rem;
+  line-height: 1.7;
+  color: #d7d7d7;
+}
+.project-type{
+  margin-top: auto;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-color);
+  border: 1px solid var(--main-color);
+  border-radius: 2rem;
+  padding: 0.7rem 1.4rem;
 }
 .contact{
   background-color: var(--bg-color);
@@ -374,6 +399,24 @@ section{
     flex-direction: column;
   }
   
+}
+
+@media(max-width: 900px){
+  .projects{
+    padding-inline: 8%;
+  }
+  .project-box{
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 620px;
+  }
+  .project-image{
+    height: 230px;
+  }
+  .project-content{
+    min-height: 190px;
+    padding: 2.5rem;
+  }
 }
   
 
