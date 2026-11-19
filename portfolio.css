@@ -274,13 +274,39 @@ section{
   color: #d7d7d7;
 }
 .project-type{
-  margin-top: auto;
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--text-color);
   border: 1px solid var(--main-color);
   border-radius: 2rem;
   padding: 0.7rem 1.4rem;
+}
+.project-meta{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: auto;
+}
+.project-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 1.8rem;
+  border-radius: 2rem;
+  background: var(--main-color);
+  color: #080808;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-btn i{
+  font-size: 1.8rem;
+}
+.project-btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px var(--main-color);
 }
 .contact{
   background-color: var(--bg-color);
